@@ -1,0 +1,32 @@
+{
+  "name": "yopki",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo run dev spec:dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\" && syncpack format",
+    "lint": "turbo lint",
+    "mismatch": "syncpack list-mismatches",
+    "mismatch:fix": "syncpack fix-mismatches && pnpm i",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "glob": "^11.0.1",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "syncpack": "^13.0.2",
+    "turbo": "^2.4.4",
+    "typescript": "^5.8.2"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "packageManager": "pnpm@10.4.1",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

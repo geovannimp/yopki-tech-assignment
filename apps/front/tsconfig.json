@@ -1,0 +1,16 @@
+{
+  "extends": "@yopki/typescript-config/base.json",
+  "compilerOptions": {
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "noUncheckedIndexedAccess": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": ["src", ".storybook/*.tsx", "eslint.config.ts", "app.config.ts"]
+}

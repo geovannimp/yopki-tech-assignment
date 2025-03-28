@@ -1,0 +1,17 @@
+# Cache
+.cache
+.turbo
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Docker volumes
+docker_volumes
+
+# Node modules
+node_modules/
+
+# Dist
+dist/
